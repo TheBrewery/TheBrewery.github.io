@@ -17,18 +17,16 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
-            $.ajax({
-                url: "././mail/contact_me.php",
-                type: "POST",
-                data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    message: message
-                },
-                cache: false,
-                success: function() {
-                    // Success message
+
+            Parse.initialize("S99BILduKfJnSN6Dggw1NmXUpQsSpEtF4xYvf667", "U99ul4IJ5wLULeGNcg8VpJufVBn8xPSu32Q0R2nX");
+
+            Parse.Cloud.run('sendContactEmail', {                    
+                name: name,
+                phone: phone,
+                email: email,
+                message: message 
+            }, {
+              success: function() {
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
@@ -39,9 +37,8 @@ $(function() {
 
                     //clear all fields
                     $('#contactForm').trigger("reset");
-                },
-                error: function() {
-                    // Fail message
+              },
+              error: function(error) {
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
@@ -49,8 +46,8 @@ $(function() {
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
-                },
-            })
+              }
+            });
         },
         filter: function() {
             return $(this).is(":visible");
