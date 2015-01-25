@@ -191,8 +191,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #fed136;
-    background-color: #fed136;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -201,7 +201,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #fed136;
+    background-color: transparent;
 }
 
 .navbar-default .nav li a {
@@ -275,8 +275,8 @@ header {
 }
 
 header .intro-text {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 50%;
+    padding-bottom: 50%;
 }
 
 header .intro-text .intro-lead-in {
