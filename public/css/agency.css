@@ -653,9 +653,10 @@ aside.clients img {
 
 section#contact {
     background-color: #222;
-    background-image: url(../img/map-image.png);
+    background-image: url(https://api.tiles.mapbox.com/v4/mapbox.dark/pin-l+fed136\(-122.418683,37.8,20\)/-122.42,37.790331,13/1280x600@2x.png?access_token=pk.eyJ1IjoiamhpbGRlbnNwZXJnZXIiLCJhIjoiMmIxYmNmMDdkNDVhZTQ3MDk1NjczYmM2NzQzZWRhYmIifQ.ckWi0SsbOLPFdPgf7ZataQ);
     background-position: center;
     background-repeat: no-repeat;
+    opacity: 0.93;
 }
 
 section#contact .section-heading {
