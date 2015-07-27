@@ -24,7 +24,7 @@ p {
 
 p.large {
     font-size: 16px;
-}
+} 
 
 a,
 a:hover,
@@ -669,6 +669,9 @@ section#contact .form-group {
 
 section#contact .form-group input,
 section#contact .form-group textarea {
+    color: #fff;
+    border-color: #555;
+    background-color: rgba(49, 48, 48, 0.90);
     padding: 20px;
 }
 
