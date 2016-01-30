@@ -1,0 +1,92 @@
+url: https://thebrewery.github.io
+baseurl: /agency-jekyll-theme/
+
+# Build settings
+markdown: kramdown
+permalink: "blog/:title"
+
+# Site settings
+title: the Brewery
+email: jim@thebrewery.io
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+
+# Services
+services:
+- heading: "Application"
+  subheading: "We build high performance apps from the foundation up using the latest tools and technologies."
+  icon: code-fork
+- heading: "Content"
+  subheading: "No app is complete without dynamic content that coverts. From in-app strategy to persuasive push notifications, we provide the prose that maximizes user engagement."
+  icon: tablet
+- heading: "Optimization"
+  subheading: "63% of apps are discovered through search. Using ASO techniques, we work with you to ensure your app gets the eyeballs, traffic, and downloads it deserves."
+  icon: apple
+
+# Portfolio
+portfolio:
+- title: Taplister
+  subtitle: iOS Application
+  layout: default
+  id: Taplister
+  images:
+    - img: taplister_1_framed.png
+    - img: taplister_3_framed.png
+    - img: taplister_4_framed.png
+    - img: taplister_2_framed.png
+  thumbnail: taplister_icon.png
+  project-date: December 2015
+  client: Taplister
+  services: iOS Application Development
+  technologies: "Swift, CocoaPods"
+  description: "We were tasked with designing and implementing a completely new version of Taplister's iOS application to give them a current look and feel. We delivered the third version of Taplister for iPhone and iPad, written entirely in Swift, in just one month."
+  url: http://www.taplister.com
+
+- title: Treats SDK
+  subtitle: iOS SDK
+  layout: default
+  id: Treats
+  images:
+    - img: treats.png
+  thumbnail: treats_icon.png
+  alt: image-alt
+  project-date: August 2015
+  client: Clinkle
+  services: iOS SDK Development
+  technologies: "Swift, CocoaPods"
+  description: "We worked with the Treats SDK on major features in their framework as they ramped up their team. Our main focus and contributions were setting up the build systems and infrastructure for the developement of an entirely Swift dynamic framework. We also set up the CocoaPod for easy installation and version management of their public releases."
+  url: http://www.clinkle.com
+
+# Team names, titles and social links
+people:
+- name: Jim Hildensperger
+  pic: jim
+  hover: jim_hover
+  position: Lead Developer
+  description: "I'm an engineer with an eye for design and a passion for creating captivating user experiences. I love sports, travel, technology, and craft beer. My experience includes work on more than a dozen iOS applications for both iPhone and iPad using almost every framework of the SDK. I've also worked with Android, OSX, and Ruby applications in personal and professional projects."
+  social:
+    - title: twitter
+      url: http://www.twitter.com/jhildensperger
+    - title: github
+      url: http://www.github.com/jhildensperger
+    - title: linkedin
+      url: http://www.linkedin.com/in/jhildensperger
+    - title: stack-overflow
+      url: http://stackoverflow.com/users/1432796/jhildensperger
+
+- name: Asha Indralingam
+  pic: asha
+  hover: asha_hover
+  position: Content/Marketing Specialist
+  description: "With senior level experience in the tech world, I've well-versed in the nuances of content curation and mobile marketing. I'm passionate about community-centric products and content strategy. To date, I've worked at multiple startups in San Francisco, from an early stage content curation website and the world’s largest social good platform to a midsize gaming studio and more. I’ve been there, launched this and rebranded that."
+  social:
+    - title: twitter
+      url: http://www.twitter.com/ashaindra
+    - title: linkedin
+      url: http://www.linkedin.com/in/ashaindra
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: http://twitter.com/thebreweryio
+  - title: github
+    url: http://github.com/thebrewery

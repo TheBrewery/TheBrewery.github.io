@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+  {% include blog_navigation.html %}
+  
+  <!-- Header -->
+    <header>
+      <div class="blog-heading post-preview">
+        <h2 class="post-title">{{ page.title }}</h2>
+            {% if page.tagline %}
+        <h3 class="post-subtitle">{{ page.tagline }}</h3>
+            {% endif %}
+        <p class="post-meta">Posted by <a href="#">{{ page.author }}</a> on {{ page.date | date: '%B %e, %Y' }}</p>
+      </div>
+    </header>
+
+    <article>
+        <div class="container">
+            <div class="row-fluid post-full">
+              <div class="span12">
+                <div class="content dont-break-out">
+                  {{ content }}
+                </div>
+
+              {% unless page.categories == empty %}
+                <hr>
+                <strong>Categories:</strong>
+                <ul class="tag_box inline">
+                  <li><i class="icon-folder-open"></i></li>
+                  {% assign categories_list = page.categories %}
+                </ul>
+              {% endunless %}
+
+              {% unless page.tags == empty %}
+                <strong>Tags:</strong>
+                <ul class="tag_box inline">
+                  <li><i class="icon-tags"></i></li>
+                  {% assign tags_list = page.tags %}
+
+                </ul>
+              {% endunless %}
+
+                <hr>
+                <div class="pagination">
+                    <div class="row text-center">
+                      {% if page.previous %}
+                        <div class="col-xs-6">
+                          <a href="{{ site.baseurl }}{{ page.previous.url }}">
+                            <div class="btn-primary">
+                              &larr; Previous
+                            </div>
+                          </a>
+                        </div>
+                      {% else %}
+                        <div class="col-xs-6">
+                          <div class="btn-primary disabled">
+                            &larr; Previous
+                          </div>
+                        </div>
+                      {% endif %}
+
+                      {% if page.next %}
+                        <div class="col-xs-6">
+                          <a href="{{ site.baseurl }}{{ page.next.url }}">
+                            <div class="btn-primary">
+                              Next &rarr;
+                            </div>
+                          </a>
+                        </div>
+                      {% else %}
+                        <div class="col-xs-6">
+                          <div class="btn-primary disabled">
+                            Next &rarr;
+                          </div>
+                        </div>
+                      {% endif %}
+                  </div>
+                </div>
+                <hr>
+              </div>
+            </div>
+        </div>
+    </article>
+
+    {% include footer.html %}
+    {% include js.html %}
+
+    </body>
+</html>
+

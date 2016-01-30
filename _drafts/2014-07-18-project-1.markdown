@@ -1,0 +1,22 @@
+---
+layout: post
+author: Jim Hildensperger
+title: This is an article 1
+date: 2015-1-1
+img: roundicons.png
+---
+
+*What* I like to is create a single target for my application with 2 schemes, debug and release.  This allows you to easily select what version of your app you're building. If you see a purpose for it you can use this technique to create many schemes this way of you see fit.
+
+*Why* You could also create 2 targets and have them be configured for debug and release, but different targets have different build settings so it is very easy to forget to copy a setting or file that breaks your builds. This also makes it very clear what version you're building and what constants and keys you're using for your external services. 
+
+*How*
+Create a new config file for each scheme.
+Set the config file for the configuration of the target in your build settings.
+Change the product name in your build settings to use the name in your respective configuration file. This will give you the ability to create multiple application names so you never have to wonder if you're looking at a debug or release build.
+
+#Swift
+- Create a file for each target to contain the constants for that target. 
+	- I use ProjectNameConfiguationConstants.
+- Add excluded source files for the other constants files. 
+	- This is kind of a bummer, but to my knowledge there is no way to add a file to the target if it is not already added via Xcode because it will not get an identifier in the project file so we must include all of them in the target them remove them for the build configuration.

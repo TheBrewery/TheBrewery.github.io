@@ -1,0 +1,60 @@
+ <!-- Portfolio Modals -->
+ {% for project in site.portfolio %}
+    <div class="portfolio-modal modal fade" id="portfolioModal{{ project.id }}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                
+                            <h2>{{ project.title }}</h2>
+                            <hr class="star-primary">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                    {% if project.images.first == project.images.last %}
+                        <img src="img/portfolio/{{ project.images.first.img }}" class="img-responsive img-centered" alt="{{ project.alt }}">
+                    {% else %}
+                        {% for img in project.images %}
+                        <div class="col-md-3">
+                            <img src="img/portfolio/{{ img.img }}" class="img-responsive img-centered" alt="{{ project.alt }}">
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <p>{{ project.description }}</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="{{ project.url }}">{{ project.client }}</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong>{{ project.project-date }}</strong>
+                                </li>
+                                <li>Service:
+                                    <strong>{{ project.services }}</strong>
+                                </li>
+                                {% if project.technologies %}
+                                <li>Technology:
+                                    <strong>{{ project.technologies }}</strong>
+                                </li>
+                                {% endif %}
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

@@ -1,0 +1,30 @@
+<!-- Blog Section -->
+	<section id="blog">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-heading">Blog</h2>
+					<h3 class="section-subheading text-muted">Writings</h3>
+				</div>
+			</div>
+			<div class="row text-center">
+				{% for post in site.posts limit:3 %}
+					<div class="col-md-4 post-preview">
+						<a href="{{ site.baseurl }}{{ post.url }}">
+						<h3 class="post-title">{{ post.title }}</h3>
+			            {% if post.tagline %}
+			            <h4 class="post-subtitle">{{ post.tagline }}</h4>
+			            {% endif %}
+			        	</a>
+
+						<p class="post-meta"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.author }}</a> on {{ post.date | date: '%B %e, %Y' }}</p>
+						<p class="text-muted dont-break-out">{{ post.content | strip_html | truncatewords: 25 }} <a href="{{ site.baseurl }}{{ post.url }}" class="continue-reading">Continue reading →</a></p>
+
+					</div>
+				{% endfor %}
+			</div>
+			<div class="row text-center">
+				<a href="{{ site.baseurl }}/blog" class="btn btn-xl" id="explore-posts">Explore Posts</a>
+			</div>
+		</div>
+	</section>

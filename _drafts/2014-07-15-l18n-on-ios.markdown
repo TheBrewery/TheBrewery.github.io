@@ -1,0 +1,122 @@
+---
+layout: post
+author: Jim Hildensperger
+title: l18n on iOS with Swift and Objective-C
+date: 2015-4-1 00:00:00 -0800
+img: roundicons.png
+---
+
+There were some great articles from [NSHipster](http://nshipster.com/nslocalizedstring/) and [HotelsTonight](http://engineering.hoteltonight.com/the-nitty-gritty-of-ios-internationalization-and-localization) that inspired TaskRabbit to wrap our strings in a Macro, but little did we know what we had gotten ourselves into. 
+
+##The HotelsTonight Solution
+
+**pros**
+ - worked out of the box
+ - replied on strings
+
+**cons**
+ - quite inefficient
+ - doesn't work with swift
+
+##Rolling Our Own Solution
+In our macro used in Objective-C looks like this 
+
+    #define TRStr(key, value, comment) NSLocalizedStringWithDefaultValue(key, nil, [NSBundle mainBundle], value, comment)
+
+And our beautiful Swift function looks like this 
+
+    func TRStr (key: String, value: String, comment: String) -> String {
+        return NSLocalizedString(key, tableName: nil, bundle: NSBundle.mainBundle(), value: value, comment: comment)
+    }
+
+You may have already noticed that the signatures of these two functions are mysteriously close
+
+Objective-C   	
+
+    TRStr(@"S_localizedString", @"localized string", @"this is 'localized string' localized");
+
+Swift				
+
+    TRStr("S_localizedString", "localized string", "this is 'localized string' localized")
+
+This is useful because we were already in the habit of using TRStr() all the time and a relatively simple regex can match both. 
+
+**pros**
+ - we can edit it however we want
+ - it is super fast
+
+**cons**
+ - written in ruby by an objective-c programmer 
+
+    class LocalizedString
+      attr_accessor :key, :value, :comment
+    
+      def initialize (key, value, comment)
+        @key, @value, @comment = key, value, comment
+      end
+    end
+    
+    task :strings do
+      inital_time = Time.now
+      excluded_file_names = ["main.m"]
+      output_file_name = "Localizable.strings"
+      output_directory = "Resources/Base.lproj"
+      file_path_regex = /\.h$|\.m$|\.(swift)$/
+      macro_regex = /TRStr\(\s*@?(".*?")\s*,\s*@?(".*?")\s*,\s*@?"(.*?)"\s*\)/
+    
+      file_paths = Array.new
+      matched_file_paths = Set.new
+      matched_strings = Array.new
+      match_count = 0
+      localized_strings_by_key = Hash.new
+      output_file = String.new
+    
+      Find.find(Dir.pwd + "/#{project_name}") do |file_path|
+        if File.extname(file_path).match(file_path_regex)
+          unless excluded_file_names.include? File.basename(file_path)
+            file_paths.push(file_path)
+          end
+        end
+      end
+    
+      Find.find(Dir.pwd + "/Pods") do |file_path|
+        if File.extname(file_path).match(file_path_regex)
+          unless excluded_file_names.include? File.basename(file_path)
+            file_paths.push(file_path)
+          end
+        end
+      end
+     
+      file_paths.each { |file_path|
+        print "." 
+        file_source = File.read(file_path)
+        file_source.scan(macro_regex) { |key, value, comment|
+          matched_file_paths.add(file_path)
+          match_count+=1
+          unless localized_strings_by_key.has_key?(key)
+            localized_strings_by_key.store(key, LocalizedString.new(key, value, comment))
+          else
+            # Key "S_Email" used with multiple values. Value "Email" kept. Value "E-mail" ignored.
+            stored_value = localized_strings_by_key[key].value
+            unless stored_value === value
+              puts "\nKey #{key} used with multiple values. Value #{stored_value} kept. Value #{value} ignored."  #{File.basename(file_path)}"
+            end
+          end
+        }
+      }
+     
+      localized_strings_by_key.sort.map { |key, localized_string|
+        unless localized_string.comment.length == 0 
+          output_file << "/* #{localized_string.comment} */\n" 
+        end
+        output_file << key + " = " + localized_string.value + ";\n\n"
+      }
+     
+      File.open("#{output_directory}/#{output_file_name}", 'w') { |file| file.write(output_file) }
+     
+      puts "\n#{file_paths.count} files scanned in #{Time.now - inital_time}s"
+      puts "#{matched_file_paths.count} files containing TRStr"
+      puts "#{match_count} strings (#{localized_strings_by_key.count} unique)"
+      puts "#{output_file_name} written to #{output_directory}"
+    
+    end

@@ -1,0 +1,41 @@
+---
+layout: post
+author: Jim Hildensperger
+title: How Not To Animate A UIView
+date: 2015-2-1 00:00:00 -0800
+img: roundicons.png
+---
+
+First off, you need to call super.viewDidAppear(animated) when you override viewDidAppear: in your view controller subclass.
+
+Unfortunately, it seems to work just fine for me with this view controller so there must be something else going on...
+
+class ViewController: UITableViewController {
+    var loadingView: UIView!
+
+    override func viewDidLoad() {
+            super.viewDidLoad()
+
+        loadingView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        loadingView.backgroundColor = UIColor.redColor()
+        loadingView.center = view.center
+        view.addSubview(loadingView)
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        UIView.animateWithDuration(0.7, delay: 1, options: .CurveEaseOut, animations: {
+            var loadingViewFrame = self.loadingView.frame
+            loadingViewFrame.origin.y += 600
+
+            self.loadingView.frame = loadingViewFrame
+        }, completion: nil)
+    }
+}
+
+Your issue is most-likely because layoutSubviews may be called after viewDidAppear: (I believe this is different for iOS 8 vs iOS 9) so the changes you made get overridden almost immediately. You can confirm this by overriding viewDidLayoutSubviews in your UIViewController subclass and breakpointing viewDidLoad, viewWillAppear:, viewDidAppear:, and viewDidLayoutSubviews to see what order they happen in.
+
+One thing you can do to achieve a similar effect is use a dispatch_once block with a once_token that is a property of your class to execute the animation in viewDidLayoutSubviews. This will insure that your animation is executed once per instance of your class after the initial view layout has occurred. This might be what you're looking for.
+
+If you could provide more of your view controller code or a github link I may be able to give you a better, less potentially hacky, answer about what is going on.
