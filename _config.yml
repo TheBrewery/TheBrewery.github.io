@@ -6,9 +6,10 @@ markdown: kramdown
 permalink: "blog/:title"
 
 # Site settings
-title: the Brewery
+name: the Brewery
+title: The Brewery - Crafting mobile experiences.
 email: jim@thebrewery.io
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+description: "We create captivating mobile applications and provide the marketing strategies to make them successful."
 
 # Services
 services:
