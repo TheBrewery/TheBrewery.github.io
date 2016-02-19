@@ -1,5 +1,5 @@
-url: https://thebrewery.github.io
-baseurl: /agency-jekyll-theme/
+url: http://www.thebrewery.io
+baseurl: ""
 
 # Build settings
 markdown: kramdown

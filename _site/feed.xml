@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>the Brewery</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
-    <link>https://thebrewery.github.io/agency-jekyll-theme//</link>
-    <atom:link href="https://thebrewery.github.io/agency-jekyll-theme//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 29 Jan 2016 23:59:38 -0300</pubDate>
-    <lastBuildDate>Fri, 29 Jan 2016 23:59:38 -0300</lastBuildDate>
+    <title>The Brewery - Crafting mobile experiences.</title>
+    <description>We create captivating mobile applications and provide the marketing strategies to make them successful.</description>
+    <link>https://thebrewery.github.io/</link>
+    <atom:link href="https://thebrewery.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 19 Feb 2016 19:46:57 +0800</pubDate>
+    <lastBuildDate>Fri, 19 Feb 2016 19:46:57 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
   </channel>

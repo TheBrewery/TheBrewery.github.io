@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ "/style.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/style.css' | prepend: site.baseurl }}">
     <!-- Custom Fonts -->
 
     <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
@@ -36,8 +36,8 @@
 
     <meta property="og:title" content="The Brewery" />
     <meta property="og:type" content="website" />       
-    <meta property="og:image" content="http://profile.ak.fbcdn.net/hprofile-ak-snc4/277072_61646342824_993843268_n.jpg" />      
-    <meta property="og:url" content="http://www.thebrewery.io" />
+    <meta property="og:image" content="{{ site.url }}/img/logo.png" />      
+    <meta property="og:url" content="{{ site.url }}" />
     <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
