@@ -17,7 +17,7 @@ services:
   subheading: "We build high performance apps from the foundation up using the latest tools and technologies."
   icon: code-fork
 - heading: "Content"
-  subheading: "No app is complete without dynamic content that coverts. From in-app strategy to persuasive push notifications, we provide the prose that maximizes user engagement."
+  subheading: "No app is complete without dynamic content that converts. From in-app strategy to persuasive push notifications, we provide the prose that maximizes user engagement."
   icon: tablet
 - heading: "Optimization"
   subheading: "63% of apps are discovered through search. Using ASO techniques, we work with you to ensure your app gets the eyeballs, traffic, and downloads it deserves."
