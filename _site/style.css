@@ -350,8 +350,9 @@ header {
     margin-top: 50px;
     text-align: center;
     color: #fff;
+    background-color: #424242;
     background-attachment: scroll;
-    background-image: url('../img/header_background.jpg');
+    background-image: url(../img/header_background.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -726,6 +727,8 @@ section h3.section-subheading {
 .team-member img {
     margin: 0 auto;
     border: 7px solid #fff;
+    width: 275px;
+    height: auto;
 }
 
 .team-member h4 {
@@ -743,10 +746,14 @@ aside.clients img {
 }
 
 section#contact {
-    background-color: #222;
-    background-image: url(/img/contact_background.jpg);
+    background-color: #424242;
+    background-image: url(../img/contact_background.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
     opacity: 0.93;
 }
 

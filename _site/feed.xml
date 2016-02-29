@@ -3,10 +3,10 @@
   <channel>
     <title>The Brewery - Crafting mobile experiences.</title>
     <description>We create captivating mobile applications and provide the marketing strategies to make them successful.</description>
-    <link>https://thebrewery.github.io/</link>
-    <atom:link href="https://thebrewery.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 19 Feb 2016 19:46:57 +0800</pubDate>
-    <lastBuildDate>Fri, 19 Feb 2016 19:46:57 +0800</lastBuildDate>
+    <link>http://www.thebrewery.io/</link>
+    <atom:link href="http://www.thebrewery.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 03 Mar 2016 00:37:24 +0800</pubDate>
+    <lastBuildDate>Thu, 03 Mar 2016 00:37:24 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
   </channel>

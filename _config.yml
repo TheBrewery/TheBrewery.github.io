@@ -60,8 +60,8 @@ portfolio:
 # Team names, titles and social links
 people:
 - name: Jim Hildensperger
-  pic: jim
-  hover: jim_hover
+  pic: jim.jpg
+  hover: jim_hover.jpg
   position: Lead Developer
   description: "I'm an engineer with an eye for design and a passion for creating captivating user experiences. I love sports, travel, technology, and craft beer. My experience includes work on more than a dozen iOS applications for both iPhone and iPad using almost every framework of the SDK. I've also worked with Android, OSX, and Ruby applications in personal and professional projects."
   social:
@@ -75,8 +75,8 @@ people:
       url: http://stackoverflow.com/users/1432796/jhildensperger
 
 - name: Asha Indralingam
-  pic: asha
-  hover: asha_hover
+  pic: asha.jpg
+  hover: asha_hover.jpg
   position: Content/Marketing Specialist
   description: "With senior level experience in the tech world, I've well-versed in the nuances of content curation and mobile marketing. I'm passionate about community-centric products and content strategy. To date, I've worked at multiple startups in San Francisco, from an early stage content curation website and the world’s largest social good platform to a midsize gaming studio and more. I’ve been there, launched this and rebranded that."
   social:
