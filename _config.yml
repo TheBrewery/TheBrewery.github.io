@@ -51,11 +51,11 @@ portfolio:
   thumbnail: treats_icon.png
   alt: image-alt
   project-date: August 2015
-  client: Clinkle
+  client: Treats
   services: iOS SDK Development
   technologies: "Swift, CocoaPods"
   description: "We worked with the Treats SDK on major features in their framework as they ramped up their team. Our main focus and contributions were setting up the build systems and infrastructure for the developement of an entirely Swift dynamic framework. We also set up the CocoaPod for easy installation and version management of their public releases."
-  url: http://www.clinkle.com
+  url: https://treatme.com
 
 # Team names, titles and social links
 people:
