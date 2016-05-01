@@ -27,7 +27,7 @@ services:
 portfolio:
 - title: Taplister
   subtitle: iOS Application
-  layout: default
+  type: default
   id: Taplister
   images:
     - img: taplister_1_framed.png
@@ -44,7 +44,7 @@ portfolio:
 
 - title: Treats SDK
   subtitle: iOS SDK
-  layout: default
+  type: video
   id: Treats
   images:
     - img: treats.png

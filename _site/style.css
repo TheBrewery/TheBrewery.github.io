@@ -11,6 +11,16 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+/* todo fix this shit*/
+video {
+    bottom: 308px;
+    left: 50%;
+    margin-left: -180px;
+    position: absolute;
+    width: 320px;
+    z-index: 10;
+}
+
 body {
     overflow-x: hidden;
     font-family: "Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
