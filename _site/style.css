@@ -11,6 +11,28 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+ .typed-cursor{
+     opacity: 1;
+     -webkit-animation: blink 0.7s infinite;
+     -moz-animation: blink 0.7s infinite;
+     animation: blink 0.7s infinite;
+ }
+ @keyframes blink{
+     0% { opacity:1; }
+     50% { opacity:0; }
+     100% { opacity:1; }
+ }
+ @-webkit-keyframes blink{
+     0% { opacity:1; }
+     50% { opacity:0; }
+     100% { opacity:1; }
+ }
+ @-moz-keyframes blink{
+     0% { opacity:1; }
+     50% { opacity:0; }
+     100% { opacity:1; }
+ }
+
 /* todo fix this shit*/
 video {
     bottom: 308px;
@@ -366,7 +388,6 @@ header {
     background-image: url(../img/header_background.jpg);
     background-attachment: fixed;
     background-position: center center;
-    background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -756,15 +777,20 @@ aside.clients img {
 }
 
 section#contact {
-    background-color: #424242;
-    background-image: url(../img/contact_background.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    opacity: 0.93;
+  text-align: center;
+  color: #fff;
+  height: 80%;
+  background-color: #424242;
+  background-size: cover;
+  background-image: url(../img/header_background.jpg);
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section#contact .section-heading {
@@ -775,10 +801,14 @@ section#contact .form-group {
     margin-bottom: 25px;
 }
 
+textarea {
+  resize: none;
+}
+
 section#contact .form-group input,
 section#contact .form-group textarea {
     color: #fff;
-    border-color: #555;
+    border-color: #444;
     background-color: rgba(49, 48, 48, 0.90);
     padding: 20px;
 }
