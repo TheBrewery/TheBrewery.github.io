@@ -384,7 +384,7 @@ header {
     color: #fff;
     height: 90%;
     background-color: #424242;
-    background: url(../img/header_background.jpg) no-repeat center center fixed;
+    background: url(../img/header_background.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -418,6 +418,7 @@ header .intro-text .intro-heading {
 @media(min-width:768px) {
     header {
         margin-top: 0px;
+        background-attachment: fixed;
     }
 
     header .intro-text {
@@ -776,7 +777,7 @@ section#contact {
   text-align: center;
   color: #fff;
   background-color: #424242;
-  background: url(../img/header_background.jpg) no-repeat center center fixed;
+  background: url(../img/header_background.jpg) no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -784,6 +785,12 @@ section#contact {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media(min-width:768px) {
+    section#contact {
+        background-attachment: fixed;
+    }
 }
 
 section#contact .section-heading {
