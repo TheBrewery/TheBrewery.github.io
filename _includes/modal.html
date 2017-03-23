@@ -12,21 +12,18 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
-                
+
                             <h2>{{ project.title }}</h2>
                             <hr class="star-primary">
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div id="project-content" class="row">
                     {% if project.type == "video" %}
-                        <!-- <div class="flex-item flex-item--end iphone-cell center">
-                        </div> -->
-
-                        <video autoplay="" id="welcome-video" loop="" mute="">
+                        <video id="welcome-video" autoplay="" loop="" mute="">
                             <source src="vid/treats.mp4" type="video/mp4">
                         </video>
-                        <img alt="" src="img/iphone.png">
+                        <img id="welcome-video-background" alt="" src="img/iphone.png">
                     {% else %}
                         {% if project.images.first == project.images.last %}
                                 <img src="img/portfolio/{{ project.images.first.img }}" class="img-responsive img-centered" alt="{{ project.alt }}">

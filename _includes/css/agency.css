@@ -26,14 +26,21 @@
      100% { opacity:1; }
  }
 
-/* todo fix this shit*/
-video {
-    bottom: 308px;
-    left: 50%;
-    margin-left: -180px;
-    position: absolute;
-    width: 320px;
-    z-index: 10;
+#welcome-video {
+  bottom: 30px;
+  left: 50%;
+  margin-left: -134px;
+  position: absolute;
+  width: 242px;
+  z-index: 10;
+}
+
+#welcome-video-background {
+  height: 640px;
+}
+
+#project-content {
+  position: relative;
 }
 
 body {
