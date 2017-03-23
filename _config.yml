@@ -6,7 +6,8 @@ markdown: kramdown
 permalink: "blog/:title"
 
 # Site settings
-name: the Brewery
+name: The Brewery
+company: The Brewery B.V.
 title: The Brewery - Crafting mobile experiences.
 email: jim@thebrewery.io
 description: "We create captivating mobile applications and provide the marketing strategies to make them successful."
@@ -27,7 +28,7 @@ services:
 portfolio:
 - title: Taplister
   subtitle: iOS Application
-  layout: default
+  type: default
   id: Taplister
   images:
     - img: taplister_1_framed.png
@@ -44,7 +45,7 @@ portfolio:
 
 - title: Treats SDK
   subtitle: iOS SDK
-  layout: default
+  type: video
   id: Treats
   images:
     - img: treats.png

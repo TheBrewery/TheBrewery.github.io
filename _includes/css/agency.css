@@ -4,17 +4,47 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+ .typed-cursor{
+     opacity: 1;
+     -webkit-animation: blink 0.7s infinite;
+     -moz-animation: blink 0.7s infinite;
+     animation: blink 0.7s infinite;
+ }
+ @keyframes blink{
+     0% { opacity:1; }
+     50% { opacity:0; }
+     100% { opacity:1; }
+ }
+ @-webkit-keyframes blink{
+     0% { opacity:1; }
+     50% { opacity:0; }
+     100% { opacity:1; }
+ }
+ @-moz-keyframes blink{
+     0% { opacity:1; }
+     50% { opacity:0; }
+     100% { opacity:1; }
+ }
+
+/* todo fix this shit*/
+video {
+    bottom: 308px;
+    left: 50%;
+    margin-left: -180px;
+    position: absolute;
+    width: 320px;
+    z-index: 10;
+}
+
 body {
+    height: 100vh;
+    webkit-tap-highlight-color: #fed136;
     overflow-x: hidden;
-    font-family: "Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 article {
     padding: 50px 0;
-}
-
-.fa {
-    color: white;
 }
 
 .dont-break-out {
@@ -52,7 +82,7 @@ article {
 }
 
 .post-subtitle {
-    font-family: "Avenir";
+    font-family: "Avenir Next";
     font-weight: 100;
     padding: 0;
     line-height: 0.9em;
@@ -92,7 +122,7 @@ p {
 
 p.large {
     font-size: 18px;
-} 
+}
 
 .team-member p.large {
     padding: 10px 15px;
@@ -124,8 +154,8 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
 }
 
 .img-centered {
@@ -151,8 +181,8 @@ h6 {
     margin: auto;
     border-color: #fed136;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
     color: #fff;
     background-color: #fed136;
 }
@@ -199,13 +229,15 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl {
     padding: 20px 40px;
     border-color: #fed136;
-    border-radius: 3px;
+    border-radius: 40px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
-    font-weight: 700;
-    color: #fff;
-    background-color: #fed136;
+    color: #fed136;
+    background-color: transparent;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
 }
 
 .btn-xl:hover,
@@ -213,7 +245,7 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-    border-color: #f6bf01;
+    border-color: #fec503;
     color: #fff;
     background-color: #fec503;
 }
@@ -239,8 +271,13 @@ fieldset[disabled] .btn-xl:active,
 .btn-xl.disabled.active,
 .btn-xl[disabled].active,
 fieldset[disabled] .btn-xl.active {
+    color: white;
     border-color: #fed136;
     background-color: #fed136;
+}
+
+.btn-xl {
+  border-width: .13em;
 }
 
 .btn-xl .badge {
@@ -251,6 +288,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default {
     border-color: transparent;
     background-color: #222;
+    padding: 0px;
 }
 
 .navbar-default .navbar-brand {
@@ -284,31 +322,30 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .nav li a {
+    border-radius: 0;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     color: #fff;
+    border-bottom: 2px solid transparent;
 }
 
 .navbar-default .nav li a:hover {
-    outline: 0;
-    color: #fed136;
+    border-bottom: 2px solid #fed136;
+    background-color: transparent;
 }
 
-.navbar-default .navbar-nav>.active>a {
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
     border-radius: 0;
-    color: #fff;
-    background-color: #fed136;
+    color: #fed136;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
 }
 
-.navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a:focus {
-    color: #fff;
-    background-color: #fec503;
-}
-
-@media(min-width:768px) {    
+@media(min-width:768px) {
     .navbar-default {
         padding: 25px 0;
         border: 0;
@@ -325,10 +362,6 @@ fieldset[disabled] .btn-xl.active {
         transition: all .3s;
     }
 
-    .navbar-default .navbar-nav>.active>a {
-        border-radius: 3px;
-    }
-
     .navbar-default.navbar-shrink {
         padding: 10px 0;
         background-color: #222;
@@ -340,22 +373,18 @@ fieldset[disabled] .btn-xl.active {
 }
 
 header {
-    margin-top: 50px;
     text-align: center;
     color: #fff;
+    height: 90%;
     background-color: #424242;
-    background-attachment: scroll;
-    background-image: url(../img/header_background.jpg);
-    background-position: center center;
-    background-repeat: none;
+    background: url(../img/header_background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
-}
-
-header .intro-text {
-    padding: 50% 0;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header .blog-heading {
@@ -363,20 +392,20 @@ header .blog-heading {
 }
 
 header .intro-text .intro-lead-in {
-    margin-bottom: 25px;
     font-family: "Droid Serif", "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 22px;
     font-style: italic;
     line-height: 22px;
+    padding-bottom: 10px;
 }
 
 header .intro-text .intro-heading {
-    margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 50px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 50px;
+    padding-bottom: 10px;
 }
 
 @media(min-width:768px) {
@@ -399,9 +428,9 @@ header .intro-text .intro-heading {
     header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-transform: uppercase;
-        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 75px;
-        font-weight: 700;
+        font-weight: 500;
         line-height: 75px;
     }
 }
@@ -419,7 +448,7 @@ section h2.section-heading {
 section h3.section-subheading {
     margin-bottom: 75px;
     text-transform: none;
-    font-family: "Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-style: italic;
     font-weight: 400;
@@ -452,16 +481,14 @@ section h3.section-subheading {
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    border-radius: 20px;
-    background: rgba(0,0,0,.65);
-    -webkit-transition: all ease .5s;
-    -moz-transition: all ease .5s;
-    transition: all ease .5s;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
-    opacity: 1;
+#portfolio .portfolio-image {
+  transition: all .2s ease-in-out;
+}
+
+#portfolio .portfolio-image:hover {
+  transform: scale(1.05);
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
@@ -497,7 +524,7 @@ section h3.section-subheading {
 
 #portfolio .portfolio-item .portfolio-caption p {
     margin: 0;
-    font-family: "Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-style: italic;
 }
@@ -739,15 +766,18 @@ aside.clients img {
 }
 
 section#contact {
-    background-color: #424242;
-    background-image: url(../img/contact_background.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    opacity: 0.93;
+  text-align: center;
+  color: #fff;
+  height: 90%;
+  background-color: #424242;
+  background: url(../img/header_background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section#contact .section-heading {
@@ -758,10 +788,14 @@ section#contact .form-group {
     margin-bottom: 25px;
 }
 
+textarea {
+  resize: none;
+}
+
 section#contact .form-group input,
 section#contact .form-group textarea {
     color: #fff;
-    border-color: #555;
+    border-color: #444;
     background-color: rgba(49, 48, 48, 0.90);
     padding: 20px;
 }
@@ -781,29 +815,29 @@ section#contact .form-control:focus {
 
 section#contact::-webkit-input-placeholder {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
     color: #bbb;
 }
 
 section#contact:-moz-placeholder {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
     color: #bbb;
 }
 
 section#contact::-moz-placeholder {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
     color: #bbb;
 }
 
 section#contact:-ms-input-placeholder {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
     color: #bbb;
 }
 
@@ -819,7 +853,7 @@ footer {
 footer span.copyright {
     text-transform: uppercase;
     text-transform: none;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 40px;
 }
 
@@ -827,7 +861,7 @@ footer ul.quicklinks {
     margin-bottom: 0;
     text-transform: uppercase;
     text-transform: none;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 40px;
 }
 
@@ -840,11 +874,9 @@ ul.social-buttons li a {
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 40px;
-    outline: 0;
-    color: #fff;
-    background-color: #222;
+    color: #222;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
@@ -853,7 +885,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: #fed136;
+    color: grey;
 }
 
 .btn:focus,
@@ -885,7 +917,7 @@ ul.social-buttons li a:active {
 
 .portfolio-modal .modal-content p.item-intro {
     margin: 20px 0 30px;
-    font-family: "Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-style: italic;
 }
@@ -960,8 +992,4 @@ img::selection {
 
 img::-moz-selection {
     background: 0 0;
-}
-
-body {
-    webkit-tap-highlight-color: #fed136;
 }

@@ -17,10 +17,10 @@
     <script src="{{ "/js/agency.js" | prepend: site.baseurl }}"></script>
 
     <script language="JavaScript">
-    {% for member in site.people %} 
+    {% for member in site.people %}
         normal = new Image(275, 275)
         normal.src="img/team/{{ member.pic }}"
         hover = new Image(275, 275)
         hover.src="img/team/{{ member.hover }}"
     {% endfor %}
-    </script>    
+    </script>
