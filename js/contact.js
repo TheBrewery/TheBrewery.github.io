@@ -4,9 +4,6 @@ $(function() {
         preventSubmit: true,
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
-            // get values from FORM
-
-            $(":button").innerHTML = 'sending...';
 
             var name = $("input#_name").val();
             var email = $("input#_replyto").val();
@@ -27,12 +24,19 @@ $(function() {
                     $('#success > .alert-success').append('</div>');
 
                     //clear all fields
+                    setTimeout(function() {
+                        $('#success').fadeOut('fast');
+                    }, 2000);
+
+                    $('#success').fadeIn('fast');
                     $('#contactForm').trigger("reset");
               } else {
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
                     $('#success > .alert-danger').append("<strong>Sorry, it seems that my mail server is not responding. Please try again later!");
                     $('#success > .alert-danger').append('</div>');
+
+                    $('#success').fadeIn('fast');
                     //clear all fields
               }
             };
@@ -46,9 +50,4 @@ $(function() {
         e.preventDefault();
         $(this).tab("show");
     });
-});
-
-/*When clicking on Full hide fail/success boxes */
-$('#name').focus(function() {
-    $('#success').html('');
 });

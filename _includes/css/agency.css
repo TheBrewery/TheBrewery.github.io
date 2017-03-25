@@ -242,9 +242,9 @@ fieldset[disabled] .btn-primary.active {
     font-size: 18px;
     color: #fed136;
     background-color: transparent;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .btn-xl:hover,
@@ -357,16 +357,16 @@ fieldset[disabled] .btn-xl.active {
         padding: 25px 0;
         border: 0;
         background-color: transparent;
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
+        -webkit-transition: padding .2s ease-in-out;
+        -moz-transition: padding .2s ease-in-out;
+        transition: padding .2s ease-in-out;
     }
 
     .navbar-default .navbar-brand {
         font-size: 2.5em;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
     }
 
     .navbar-default.navbar-shrink {
@@ -492,7 +492,9 @@ section h3.section-subheading {
 }
 
 #portfolio .portfolio-image {
-  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;;
 }
 
 #portfolio .portfolio-image:hover {
@@ -890,15 +892,15 @@ ul.social-buttons li a {
     font-size: 30px;
     line-height: 40px;
     color: #222;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    color: grey;
+    transform: scale(1.1);
 }
 
 .btn:focus,

@@ -15,6 +15,12 @@ $(function() {
     });
 });
 
+$(function() {
+    $('.btn').bind('click', function(event) {
+        $(this).blur();
+    });
+});
+
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'
