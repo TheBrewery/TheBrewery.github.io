@@ -1,4 +1,4 @@
-The website for [The Brewery BV](www.thebrewery.io)
+The website for [The Brewery BV](http://www.thebrewery.io)
 
 Agency Jekyll theme
 ====================
