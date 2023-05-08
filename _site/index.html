@@ -7,13 +7,15 @@
     <title>The Brewery - Crafting mobile experiences.</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="We create captivating mobile applications and provide the marketing strategies to make them successful.">
-    <link rel="canonical" href="http://www.thebrewery.io/">
+    <link rel="canonical" href="http://localhost:4000/">
     <link rel="stylesheet" href="/style.css">
     <!-- Custom Fonts -->
 
     <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins:200' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
@@ -39,8 +41,8 @@
 
     <meta property="og:title" content="The Brewery" />
     <meta property="og:type" content="website" />       
-    <meta property="og:image" content="http://www.thebrewery.io/img/logo.png" />      
-    <meta property="og:url" content="http://www.thebrewery.io" />
+    <meta property="og:image" content="http://localhost:4000/img/logo.png" />      
+    <meta property="og:url" content="http://localhost:4000" />
     <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -79,7 +81,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">The Brewery</a>
+                <a class="navbar-brand page-scroll hover-underline-animation" href="#page-top">The Brewery</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -88,17 +90,17 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                    <!-- <li>
+                        <a class="page-scroll hover-underline-animation" href="#services">Services</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll hover-underline-animation" href="#portfolio">Portfolio</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Team</a>
-                    </li>
+                        <a class="page-scroll hover-underline-animation" href="#team">Team</a>
+                    </li> -->
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll hover-underline-animation" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -111,160 +113,18 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Have an app idea?</div>
-                <div class="intro-heading">We can brew it.</div>
-                <a href="#contact" class="page-scroll btn btn-xl">Get in Touch</a>
+                <div class="intro-lead-in">We specialize in crafting captivating mobile applications and the marketing strategies to make them successful.</div>
+                <div class="intro-heading">Need an app?</div>
+                <a href="#contact" class="page-scroll btn btn-xl">Get in touch</a>
             </div>
         </div>
     </header>
 
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Services</h2>
-                    <h3 class="section-subheading text-muted">We make awesome applications!</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-            
-                <div class="col-md-4">
-                    <i class="fa fa-code-fork fa-5x"></i>
-                    <h4 class="service-heading">Application</h4>
-                    <p class="text-muted">We build high performance apps from the foundation up using the latest tools and technologies.</p>
-                </div>
-            
-                <div class="col-md-4">
-                    <i class="fa fa-tablet fa-5x"></i>
-                    <h4 class="service-heading">Content</h4>
-                    <p class="text-muted">No app is complete without dynamic content that converts. From in-app strategy to persuasive push notifications, we provide the prose that maximizes user engagement.</p>
-                </div>
-            
-                <div class="col-md-4">
-                    <i class="fa fa-apple fa-5x"></i>
-                    <h4 class="service-heading">Optimization</h4>
-                    <p class="text-muted">63% of apps are discovered through search. Using ASO techniques, we work with you to ensure your app gets the eyeballs, traffic, and downloads it deserves.</p>
-                </div>
-            
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Recently Completed Projects</h3>
-                </div>
-            </div>
-            <div class="row">
-            
-                <div class="col-md-6 portfolio-item">
-                    <a href="#portfolioModalTaplister" class="portfolio-link" data-toggle="modal">
-                        <img src="img/portfolio/taplister_icon.png" class="img-responsive portfolio-image" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Taplister</h4>
-                        <p class="text-muted">iOS Application</p>
-                    </div>
-                </div>
-            
-                <div class="col-md-6 portfolio-item">
-                    <a href="#portfolioModalTreats" class="portfolio-link" data-toggle="modal">
-                        <img src="img/portfolio/treats_icon.png" class="img-responsive portfolio-image" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Treats SDK</h4>
-                        <p class="text-muted">iOS SDK</p>
-                    </div>
-                </div>
-            
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" >
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Small, but growing</h3>
-                </div>
-            </div>
-            <div class="row">
-                
-                <div class="col-sm-6">
-                    <div class="team-member">
-                        <img src="img/team/jim.jpg" onmouseover="this.src='img/team/jim_hover.jpg'" onmouseout="this.src='img/team/jim.jpg'" class="img-responsive img-circle" alt="" />
-                        <h4>Jim Hildensperger</h4>
-                        <p class="text-muted">Lead Developer</p>
-                        <ul class="list-inline social-buttons">
-                            
-                            <li>
-                                <a href="http://www.twitter.com/jhildensperger">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <a href="http://www.github.com/jhildensperger">
-                                    <i class="fa fa-github"></i>
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <a href="http://www.linkedin.com/in/jhildensperger">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <a href="http://stackoverflow.com/users/1432796/jhildensperger">
-                                    <i class="fa fa-stack-overflow"></i>
-                                </a>
-                            </li>
-                            
-                        </ul>
-                        <p class="text-muted">I'm an engineer with an eye for design and a passion for creating captivating user experiences. I love sports, travel, technology, and craft beer. My experience includes work on more than a dozen iOS applications for both iPhone and iPad using almost every framework of the SDK. I've also worked with Android, OSX, and Ruby applications in personal and professional projects.</p>
-                    </div>
-                </div>
-                
-                <div class="col-sm-6">
-                    <div class="team-member">
-                        <img src="img/team/asha.jpg" onmouseover="this.src='img/team/asha_hover.jpg'" onmouseout="this.src='img/team/asha.jpg'" class="img-responsive img-circle" alt="" />
-                        <h4>Asha Indralingam</h4>
-                        <p class="text-muted">Content/Marketing Specialist</p>
-                        <ul class="list-inline social-buttons">
-                            
-                            <li>
-                                <a href="http://www.twitter.com/ashaindra">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <a href="http://www.linkedin.com/in/ashaindra">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                            </li>
-                            
-                        </ul>
-                        <p class="text-muted">With senior level experience in the tech world, I've well-versed in the nuances of content curation and mobile marketing. I'm passionate about community-centric products and content strategy. To date, I've worked at multiple startups in San Francisco, from an early stage content curation website and the world’s largest social good platform to a midsize gaming studio and more. I’ve been there, launched this and rebranded that.</p>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
         <section id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Get In Touch</h2>
+                <div class="col-lg-12">
+                    <h1 class="section-heading">Let's talk</h1>
                 </div>
             </div>
             <div class="row">
@@ -291,7 +151,7 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-                            <div class="col-lg-12 text-center">
+                            <div class="col-lg-12 text-end">
                                 <div id="success"></div>
                                 <button type="submit" class="btn btn-xl">Send Message</button>
                             </div>
@@ -305,10 +165,10 @@
     <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <span class="copyright">&copy; <script>document.write(new Date().getFullYear());</script> The Brewery B.V.</span>
+            <div class="col-md-4 text-left">
+                <span class="copyright">&copy; 2023 The Brewery B.V.</span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 text-center">
                 <ul class="list-inline social-buttons">
                     
                     <li><a href="http://twitter.com/thebreweryio"><i class="fa fa-twitter"></i></a>
@@ -319,140 +179,12 @@
                     
                 </ul>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 text-end">
                 <span class="copyright">Crafted in Amsterdam</span>
             </div>
         </div>
     </div>
 </footer>
-
-     <!-- Portfolio Modals -->
- 
-    <div class="portfolio-modal modal fade" id="portfolioModalTaplister" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-
-                            <h2>Taplister</h2>
-                            <hr class="star-primary">
-                        </div>
-                    </div>
-
-                    <div id="project-content" class="row">
-                    
-                        
-                                
-                                <div class="col-md-3">
-                                    <img src="img/portfolio/taplister_1_framed.png" class="img-responsive img-centered" alt="">
-                                </div>
-                                
-                                <div class="col-md-3">
-                                    <img src="img/portfolio/taplister_3_framed.png" class="img-responsive img-centered" alt="">
-                                </div>
-                                
-                                <div class="col-md-3">
-                                    <img src="img/portfolio/taplister_4_framed.png" class="img-responsive img-centered" alt="">
-                                </div>
-                                
-                                <div class="col-md-3">
-                                    <img src="img/portfolio/taplister_2_framed.png" class="img-responsive img-centered" alt="">
-                                </div>
-                                
-                            
-                    
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <p>We were tasked with designing and implementing a completely new version of Taplister's iOS application to give them a current look and feel. We delivered the third version of Taplister for iPhone and iPad, written entirely in Swift, in just one month.</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a target="Taplister" href="http://www.taplister.com">Taplister</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong>December 2015</strong>
-                                </li>
-                                <li>Service:
-                                    <strong>iOS Application Development</strong>
-                                </li>
-                                
-                                <li>Technology:
-                                    <strong>Swift, CocoaPods</strong>
-                                </li>
-                                
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModalTreats" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-
-                            <h2>Treats SDK</h2>
-                            <hr class="star-primary">
-                        </div>
-                    </div>
-
-                    <div id="project-content" class="row">
-                    
-                        <video id="welcome-video" autoplay="" loop="" mute="">
-                            <source src="vid/treats.mp4" type="video/mp4">
-                        </video>
-                        <img id="welcome-video-background" alt="" src="img/iphone.png">
-                    
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <p>We worked with the Treats SDK on major features in their framework as they ramped up their team. Our main focus and contributions were setting up the build systems and infrastructure for the developement of an entirely Swift dynamic framework. We also set up the CocoaPod for easy installation and version management of their public releases.</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a target="Treats" href="https://treatme.com">Treats</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong>August 2015</strong>
-                                </li>
-                                <li>Service:
-                                    <strong>iOS SDK Development</strong>
-                                </li>
-                                
-                                <li>Technology:
-                                    <strong>Swift, CocoaPods</strong>
-                                </li>
-                                
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
      <!-- jQuery Version 1.11.0 -->
     <script src="/js/jquery-1.11.0.js"></script>

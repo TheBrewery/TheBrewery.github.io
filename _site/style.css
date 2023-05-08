@@ -11,50 +11,84 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
- .typed-cursor{
-     opacity: 1;
-     -webkit-animation: blink 0.7s infinite;
-     -moz-animation: blink 0.7s infinite;
-     animation: blink 0.7s infinite;
- }
- @keyframes blink{
-     0% { opacity:1; }
-     50% { opacity:0; }
-     100% { opacity:1; }
- }
- @-webkit-keyframes blink{
-     0% { opacity:1; }
-     50% { opacity:0; }
-     100% { opacity:1; }
- }
- @-moz-keyframes blink{
-     0% { opacity:1; }
-     50% { opacity:0; }
-     100% { opacity:1; }
- }
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 #welcome-video {
-  bottom: 30px;
-  left: 50%;
-  margin-left: -134px;
-  position: absolute;
-  width: 242px;
-  z-index: 10;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -134px;
+    position: absolute;
+    width: 242px;
+    z-index: 10;
 }
 
 #welcome-video-background {
-  height: 640px;
+    height: 640px;
 }
 
 #project-content {
-  position: relative;
+    position: relative;
+}
+
+h1 {
+    font-size: 64px
 }
 
 body {
     height: 100vh;
-    webkit-tap-highlight-color: #fed136;
+    background-color: #000000;
+    color: white;
     overflow-x: hidden;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 article {
@@ -62,20 +96,20 @@ article {
 }
 
 .dont-break-out {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 
-  -ms-word-break: break-all;
-  /* This is the dangerous one in WebKit, as it breaks things wherever */
-  word-break: break-all;
-  /* Instead use this non-standard one: */
-  word-break: break-word;
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
 
-  /* Adds a hyphen where the word breaks, if supported (No Blink) */
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
 .pagination {
@@ -96,7 +130,7 @@ article {
 }
 
 .post-subtitle {
-    font-family: "Avenir Next";
+    font-family: "DM Sans";
     font-weight: 100;
     padding: 0;
     line-height: 0.9em;
@@ -122,7 +156,7 @@ article {
 }
 
 .text-muted {
-    color: #777;
+    color: #eeeeee;
 }
 
 .text-primary {
@@ -167,8 +201,7 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
 }
 
@@ -180,22 +213,13 @@ h6 {
     margin: auto;
 }
 
-.bg-light-gray {
-    background-color: #f7f7f7;
-}
-
-.bg-darkest-gray {
-    background-color: #222;
-}
-
 .btn-primary {
     border-radius: 3px;
     padding: 10px 0;
     width: 150px;
     margin: auto;
     border-color: #fed136;
-    text-transform: uppercase;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
     color: #fff;
     background-color: #fed136;
@@ -244,8 +268,7 @@ fieldset[disabled] .btn-primary.active {
     padding: 20px 40px;
     border-color: #fed136;
     border-radius: 40px;
-    text-transform: uppercase;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #fed136;
     background-color: transparent;
@@ -291,7 +314,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .btn-xl {
-  border-width: .13em;
+    border-width: .13em;
 }
 
 .btn-xl .badge {
@@ -301,24 +324,44 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
     border-color: transparent;
-    background-color: #222;
+    background-color: hsla(0, 0%, 0%, 0.80);
     padding: 0px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    opacity: 1;
 }
 
-.navbar-default .navbar-brand {
-    font-family: Josefin Sans,"Helvetica Neue",Helvetica,sans-serif;
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
     color: #fed136;
 }
 
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-brand:active,
-.navbar-default .navbar-brand.active {
-    color: #fec503;
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fed136;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.navbar-default .navbar-brand {
+    font-family: DM Sans, Helvetica Neue, Helvetica, sans-serif;
+    color: #ffffff;
 }
 
 .navbar-default .navbar-collapse {
-    border-color: rgba(255,255,255,.02);
+    border-color: rgba(255, 255, 255, .02);
 }
 
 .navbar-default .navbar-toggle {
@@ -337,18 +380,12 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .nav li a {
     border-radius: 0;
-    text-transform: uppercase;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     color: #fff;
-    border-bottom: 2px solid transparent;
 }
 
-.navbar-default .nav li a:hover {
-    border-bottom: 2px solid #fed136;
-    background-color: transparent;
-}
 
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus,
@@ -356,42 +393,40 @@ fieldset[disabled] .btn-xl.active {
     border-radius: 0;
     color: #fed136;
     background-color: transparent;
-    border-bottom: 2px solid transparent;
 }
 
 @media(min-width:768px) {
     .navbar-default {
         padding: 25px 0;
         border: 0;
-        background-color: transparent;
         -webkit-transition: padding .2s ease-in-out;
         -moz-transition: padding .2s ease-in-out;
         transition: padding .2s ease-in-out;
     }
 
     .navbar-default .navbar-brand {
-        font-size: 2.5em;
         -webkit-transition: all .2s ease-in-out;
         -moz-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out;
     }
+}
 
-    .navbar-default.navbar-shrink {
-        padding: 10px 0;
-        background-color: #222;
-    }
+.text-left {
+    text-align: left;
+}
 
-    .navbar-default.navbar-shrink .navbar-brand {
-        font-size: 2em;
-    }
+.text-center {
+    text-align: center;
+}
+
+.text-end {
+    text-align: end;
 }
 
 header {
-    text-align: center;
     color: #fff;
-    height: 90%;
-    background-color: #424242;
-    background: url(../img/header_background.jpg) no-repeat center center scroll;
+    height: 100%;
+    background-color: #000000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -405,17 +440,8 @@ header .blog-heading {
     padding: 10% 0;
 }
 
-header .intro-text .intro-lead-in {
-    font-family: "Droid Serif", "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 22px;
-    font-style: italic;
-    line-height: 22px;
-    padding-bottom: 10px;
-}
-
 header .intro-text .intro-heading {
-    text-transform: uppercase;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 50px;
     font-weight: 500;
     line-height: 50px;
@@ -433,37 +459,33 @@ header .intro-text .intro-heading {
     }
 
     header .intro-text .intro-lead-in {
-        margin-bottom: 25px;
-        font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+        margin-bottom: 50px;
+        padding-top: 100px;
+        font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 40px;
-        font-style: italic;
+        width: 75%;
         line-height: 40px;
     }
 
     header .intro-text .intro-heading {
         margin-bottom: 50px;
-        text-transform: uppercase;
-        font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 75px;
         font-weight: 500;
         line-height: 75px;
     }
 }
 
-section {
-    padding: 100px 0;
-}
-
 section h2.section-heading {
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 24px;
     font-size: 40px;
 }
 
 section h3.section-subheading {
     margin-bottom: 75px;
     text-transform: none;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-style: italic;
     font-weight: 400;
@@ -471,7 +493,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 150px 0;
+        padding: 50px 0;
     }
 }
 
@@ -499,13 +521,14 @@ section h3.section-subheading {
 }
 
 #portfolio .portfolio-image {
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    ;
 }
 
 #portfolio .portfolio-image:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
@@ -541,7 +564,7 @@ section h3.section-subheading {
 
 #portfolio .portfolio-item .portfolio-caption p {
     margin: 0;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-style: italic;
 }
@@ -570,7 +593,7 @@ section h3.section-subheading {
     left: 40px;
     width: 2px;
     margin-left: -1.5px;
-    background-color: #f1f1f1;
+    background-color: #fff;
 }
 
 .timeline>li {
@@ -783,17 +806,16 @@ aside.clients img {
 }
 
 section#contact {
-  text-align: center;
-  color: #fff;
-  background-color: #424242;
-  background: url(../img/header_background.jpg) no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    text-align: left;
+    color: #fff;
+    background-color: #000000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    justify-content: end;
+    align-items: end;
 }
 
 @media(min-width:768px) {
@@ -811,14 +833,14 @@ section#contact .form-group {
 }
 
 textarea {
-  resize: none;
+    resize: none;
 }
 
 section#contact .form-group input,
 section#contact .form-group textarea {
-    color: #fff;
+    color: #000;
     border-color: #444;
-    background-color: rgba(49, 48, 48, 0.90);
+    /* background-color: rgba(49, 48, 48, 0.90); */
     padding: 20px;
 }
 
@@ -836,54 +858,43 @@ section#contact .form-control:focus {
 }
 
 section#contact::-webkit-input-placeholder {
-    text-transform: uppercase;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
-    color: #bbb;
+    color: hsl(0, 0%, 93%);
 }
 
 section#contact:-moz-placeholder {
-    text-transform: uppercase;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
-    color: #bbb;
+    color: #eee;
 }
 
 section#contact::-moz-placeholder {
-    text-transform: uppercase;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
-    color: #bbb;
+    color: #eee;
 }
 
 section#contact:-ms-input-placeholder {
-    text-transform: uppercase;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
-    color: #bbb;
+    color: #eee;
 }
 
 section#contact .text-danger {
     color: #e74c3c;
 }
 
-footer {
-    padding: 25px 0;
-    text-align: center;
-}
-
 footer span.copyright {
-    text-transform: uppercase;
     text-transform: none;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 40px;
 }
 
 footer ul.quicklinks {
     margin-bottom: 0;
-    text-transform: uppercase;
     text-transform: none;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 40px;
 }
 
@@ -898,7 +909,7 @@ ul.social-buttons li a {
     border-radius: 100%;
     font-size: 30px;
     line-height: 40px;
-    color: #222;
+    color: #eee;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -939,7 +950,7 @@ ul.social-buttons li a:active {
 
 .portfolio-modal .modal-content p.item-intro {
     margin: 20px 0 30px;
-    font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-style: italic;
 }
@@ -998,7 +1009,7 @@ ul.social-buttons li a:active {
     background: #fed136;
 }
 
-.col-centered{
+.col-centered {
     float: none;
     margin: 0 auto;
 }
