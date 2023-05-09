@@ -11,7 +11,7 @@ $(function() {
             const message = $("textarea#_message").val();
 
             $.ajax({
-                url: "//mailhis.to/contact@thebrewery.io",
+                url: "//formspree.io/contact@thebrewery.io",
                 method: "POST",
                 data: {
                     name: name,

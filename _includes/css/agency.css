@@ -13,6 +13,10 @@
     animation: blink 0.7s infinite;
 }
 
+.container {
+    flex: 1;
+}
+
 @keyframes blink {
     0% {
         opacity: 1;
@@ -86,6 +90,10 @@ body {
 
 article {
     padding: 50px 0;
+}
+
+#success {
+    padding-top: 20px;
 }
 
 .dont-break-out {
@@ -433,15 +441,27 @@ header .blog-heading {
     padding: 10% 0;
 }
 
+header .intro-text .intro-lead-in {
+    margin-bottom: 50px;
+    font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    width: 75%;
+    line-height: 30px;
+}
+
 header .intro-text .intro-heading {
     font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 50px;
     font-weight: 500;
     line-height: 50px;
-    padding-bottom: 10px;
+    padding-bottom: 50px;
 }
 
 @media(min-width:768px) {
+    .container {
+        flex: none
+    }
+
     header {
         margin-top: 0px;
         background-attachment: fixed;
@@ -452,19 +472,13 @@ header .intro-text .intro-heading {
     }
 
     header .intro-text .intro-lead-in {
-        margin-bottom: 50px;
         padding-top: 100px;
-        font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 40px;
-        width: 75%;
         line-height: 40px;
     }
 
     header .intro-text .intro-heading {
-        margin-bottom: 50px;
-        font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 75px;
-        font-weight: 500;
         line-height: 75px;
     }
 }
@@ -484,10 +498,8 @@ section h3.section-subheading {
     font-weight: 400;
 }
 
-@media(min-width:768px) {
-    section {
-        padding: 50px 0;
-    }
+section {
+    padding: 50px 0;
 }
 
 .service-heading {
@@ -566,9 +578,25 @@ section h3.section-subheading {
     z-index: 2;
 }
 
+#copyright {
+    text-align: center;
+}
+
+#crafted {
+    text-align: center;
+}
+
 @media(min-width:767px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px;
+    }
+
+    #copyright {
+        text-align: end;
+    }
+
+    #crafted {
+        text-align: left;
     }
 }
 
@@ -790,6 +818,8 @@ section h3.section-subheading {
     text-transform: none;
 }
 
+conta
+
 .team-member p {
     margin-top: 0;
 }
@@ -842,7 +872,7 @@ section#contact .form-group input.form-control {
 }
 
 section#contact .form-group textarea.form-control {
-    height: 236px;
+    height: 154px;
 }
 
 section#contact .form-control:focus {

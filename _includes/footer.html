@@ -1,8 +1,8 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 text-left">
-                <span class="copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.company }}</span>
+            <div class="col-md-4" id="crafted">
+                <span class="copyright">Crafted in Amsterdam</span>
             </div>
             <div class="col-md-4 text-center">
                 <ul class="list-inline social-buttons">
@@ -12,8 +12,8 @@
                     {% endfor %}
                 </ul>
             </div>
-            <div class="col-md-4 text-end">
-                <span class="copyright">Crafted in Amsterdam</span>
+            <div class="col-md-4" id="copyright">
+                <span class="copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.company }}</span>
             </div>
         </div>
     </div>
