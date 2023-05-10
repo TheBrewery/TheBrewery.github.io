@@ -103,6 +103,10 @@ article {
     padding-top: 20px;
 }
 
+#contact-info {
+    padding: 100px 0;
+}
+
 .dont-break-out {
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -201,6 +205,16 @@ a:focus,
 a:active,
 a.active {
     color: #fec503;
+}
+
+a.contact-email,
+a:link.contact-email,
+a:hover.contact-email,
+a:focus.contact-email,
+a:visited.contact-email,
+a.active.contact-email {
+    color: white;
+    text-decoration: none;
 }
 
 h1,
