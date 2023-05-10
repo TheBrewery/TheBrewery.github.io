@@ -839,8 +839,6 @@ section {
     text-transform: none;
 }
 
-conta
-
 .team-member p {
     margin-top: 0;
 }
@@ -860,6 +858,10 @@ section#contact {
     display: flex;
     justify-content: end;
     align-items: end;
+}
+
+.bottom {
+    flex: 1;
 }
 
 @media(min-width:768px) {
