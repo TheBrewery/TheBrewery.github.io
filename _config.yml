@@ -10,7 +10,7 @@ name: The Brewery
 company: The Brewery B.V.
 title: The Brewery - Crafting digital experiences.
 email: contact@thebrewery.io
-description: "We create captivating mobile applications and provide the marketing strategies to make them successful."
+description: "We create captivating applications and provide the marketing strategies to make them successful."
 
 # Services
 services:
@@ -79,7 +79,7 @@ people:
   pic: asha.jpg
   hover: asha_hover.jpg
   position: Content/Marketing Specialist
-  description: "With senior level experience in the tech world, I've well-versed in the nuances of content curation and mobile marketing. I'm passionate about community-centric products and content strategy. To date, I've worked at multiple startups in San Francisco, from an early stage content curation website and the world’s largest social good platform to a midsize gaming studio and more. I’ve been there, launched this and rebranded that."
+  description: "With senior level experience in the tech world, I've well-versed in the nuances of content curation and marketing. I'm passionate about community-centric products and content strategy. To date, I've worked at multiple startups in San Francisco, from an early stage content curation website and the world’s largest social good platform to a midsize gaming studio and more. I’ve been there, launched this and rebranded that."
   social:
     - title: twitter
       url: http://www.twitter.com/ashaindra

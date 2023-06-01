@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Brewery - Crafting digital experiences.</title>
-    <description>We create captivating mobile applications and provide the marketing strategies to make them successful.</description>
+    <description>We create captivating applications and provide the marketing strategies to make them successful.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     <pubDate>Wed, 10 May 2023 10:16:30 +0200</pubDate>
